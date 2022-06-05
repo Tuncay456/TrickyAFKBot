@@ -17,9 +17,40 @@ from Yukki.helpers import get_readable_time
 
 
 @app.on_message(filters.command(["start", "ping"]))
-async def on_start(_, message: Message):
-    bot_uptime = int(time.time() - boot)
-    Uptime = get_readable_time(bot_uptime)
-    await message.reply_text(
-        f"{botname} is alive and working good.\n\nUptime : {Uptime}"
+async def start_private(client: Client, message: Message):
+ await message.reply_photo(
+        photo=f"https://telegra.ph/file/a82f511eb98f58a685e32.jpg",
+        caption=f"""ʜᴇʟʟᴏ✨ **ᴡᴇʟᴄᴏᴍᴇ {message.from_user.mention()} !**\n
+ 
+ **ғᴏʀ ᴀɴʏ ʜᴇʟᴘ ᴊᴏɪɴ @Techno_Trickop**""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "⛓ Aᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ Gʀᴏᴜᴘ",
+                        url=f"https://t.me/trickyAfkBot?startgroup=true",
+                    )
+                ],
+                [
+        
+    
+                    InlineKeyboardButton("• Oᴡɴᴇʀ", url=f"https://t.me/herox_xd"),
+                    InlineKeyboardButton("• Dᴇᴠᴇʟᴏᴘᴇʀ ", url=f"https://t.me/herox_xd"),
+                ],
+                [
+                    InlineKeyboardButton(
+                        "• Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/Amtrickyabhii"
+                    ),
+                    InlineKeyboardButton(
+                        "• Uᴘᴅᴀᴛᴇs", url=f"https://t.me/Aboutez"
+                    ),
+                ],
+                
+            ]
+        ),
     )
+    
+    
+    
+
+    
